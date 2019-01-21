@@ -8,7 +8,7 @@ source ./define.sh
 ####################################
 adduser -q --gecos "" --disabled-login ${USER_NAME}
 echo "${USER_NAME}:${USER_NAME}" | chpasswd ${USER_NAME}
-usermod -aG sudo miyabi
+usermod -aG sudo ${USER_NAME}
 
 ####################################
 # ssh config
