@@ -1,0 +1,9 @@
+[Unit]
+Description=make_log_directory
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/make_log_directory.sh
+
+[Install]
+WantedBy=multi-user.target
