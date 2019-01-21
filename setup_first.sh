@@ -2,6 +2,7 @@
 
 # Define
 source ./define.sh
+PWD=`pwd`
 
 # motd delete
 cp /dev/null /etc/motd
@@ -14,6 +15,9 @@ apt-get -y upgrade
 apt-get -y dist-upgrade
 apt-get -y install rpi-update
 rpi-update
+
+# move src directory
+cd src
 
 ####################################
 # watch dog setup
@@ -46,6 +50,7 @@ bash ./move_directory_to_ramdisk.sh
 umount /dev/mmcblk0p2
 tune2fs -O ^has_journal /dev/mmcblk0p2
 
+cd ${PWD}
 echo "end to setup_first."
 
 # reboot
