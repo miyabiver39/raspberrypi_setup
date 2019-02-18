@@ -26,6 +26,11 @@ cp .vimrc ~/
 cp .vimrc /etc/skel
 
 ####################################
+# install package
+####################################
+bash ./install_package.sh
+
+####################################
 # watch dog setup
 ####################################
 bash ./setup_watch_dog.sh
